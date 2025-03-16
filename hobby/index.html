@@ -1,132 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hobby: Traveling</title>
-  <style>
-    /* Embedded stylesheet */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-
-    nav {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      display: flex;
-      align-items: center;
-    }
-
-    nav a:hover {
-      color: #18bc9c;
-    }
-
-    nav .icon {
-      margin-right: 8px;
-    }
-
-    section {
-      display: none;
-      padding: 20px;
-      background-color: white;
-      margin: 10px;
-      border-radius: 8px;
-    }
-
-    section.active {
-      display: block;
-    }
-
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fishing Hobby</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #006400;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #228B22;
+            padding: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        main {
+            margin: 20px;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        footer {
+            background-color: #006400;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>My Hobby: Traveling</h1>
+
+    <header>
+        <h1>Fishing: My Favorite Hobby</h1>
+    </header>
+
     <nav>
-      <a href="#" id="best-locations-link"><span class="icon">🌍</span>Best Locations</a>
-      <a href="#" id="packing-tips-link"><span class="icon">🎒</span>Packing Tips</a>
-      <a href="#" id="budgeting-link"><span class="icon">💰</span>Budgeting</a>
-      <a href="#" id="safety-tips-link"><span class="icon">⚠️</span>Safety Tips</a>
+        <a href="#" onclick="showSection('what')">What</a>
+        <a href="#" onclick="showSection('who')">Who</a>
+        <a href="#" onclick="showSection('when')">When</a>
+        <a href="#" onclick="showSection('where')">Where</a>
+        <a href="#" onclick="showSection('how')">How</a>
+        <a href="#" onclick="showSection('why')">Why</a>
     </nav>
-  </header>
 
-  <main>
-    <section id="best-locations" class="active">
-      <h2>Best Locations to Travel</h2>
-      <p>Explore the most beautiful places around the world!</p>
-    </section>
-    
-    <section id="packing-tips">
-      <h2>Packing Tips</h2>
-      <p>How to pack light and efficiently for your trips.</p>
-    </section>
-    
-    <section id="budgeting">
-      <h2>Budgeting for Your Trip</h2>
-      <p>Learn how to budget for your travel adventures without breaking the bank.</p>
-    </section>
-    
-    <section id="safety-tips">
-      <h2>Safety Tips While Traveling</h2>
-      <p>Essential tips for staying safe during your travels.</p>
-    </section>
-  </main>
+    <main>
+        <section id="what" class="active">
+            <h2>What is Fishing?</h2>
+            <p>Fishing is the activity of catching fish, either for food, sport, or recreation.</p>
+            <figure>
+                <img src="fishing_image.jpg" alt="Fishing Scene" width="300">
+                <figcaption>A peaceful day fishing by the lake.</figcaption>
+            </figure>
+            <p>It involves a variety of techniques, from fly fishing to deep-sea fishing, and can be enjoyed in freshwater or saltwater environments.</p>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 Traveling Hobby Site | All Rights Reserved</p>
-  </footer>
+        <section id="who">
+            <h2>Who Enjoys Fishing?</h2>
+            <p>Fishing is enjoyed by people of all ages, from children learning to cast their first line to experienced anglers who fish professionally.</p>
+            <figure>
+                <img src="angler_image.jpg" alt="Angler" width="300">
+                <figcaption>Fishing is enjoyed by many around the world.</figcaption>
+            </figure>
+        </section>
 
-  <script>
-    // JavaScript to toggle visibility of sections
-    const sections = document.querySelectorAll('section');
-    const links = document.querySelectorAll('nav a');
+        <section id="when">
+            <h2>When is Fishing Most Popular?</h2>
+            <p>Fishing is popular year-round, but the best time to fish often depends on the season and location. Spring and summer are prime fishing seasons in many areas.</p>
+            <figure>
+                <img src="seasonal_fishing.jpg" alt="Fishing by the Seasons" width="300">
+                <figcaption>The changing seasons impact fishing opportunities.</figcaption>
+            </figure>
+        </section>
 
-    links.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = e.target.id.replace('-link', '');
-        sections.forEach(section => {
-          if (section.id === targetId) {
-            section.classList.add('active');
-          } else {
-            section.classList.remove('active');
-          }
-        });
-      });
-    });
-  </script>
+        <section id="where">
+            <h2>Where to Fish?</h2>
+            <p>Fishing can be done in lakes, rivers, oceans, and even ponds. Popular fishing spots include the Amazon River, the Great Lakes, and coastal waters.</p>
+            <figure>
+                <img src="fishing_spot.jpg" alt="Fishing Location" width="300">
+                <figcaption>Great fishing locations are everywhere!</figcaption>
+            </figure>
+        </section>
+
+        <section id="how">
+            <h2>How to Fish?</h2>
+            <p>Fishing requires the right gear, techniques, and patience. The basic equipment includes a fishing rod, reel, line, and bait.</p>
+            <figure>
+                <img src="fishing_gear.jpg" alt="Fishing Gear" width="300">
+                <figcaption>Basic fishing gear for beginners.</figcaption>
+            </figure>
+        </section>
+
+        <section id="why">
+            <h2>Why I Love Fishing?</h2>
+            <p>Fishing is my way of unwinding, connecting with nature, and testing my patience. It offers the excitement of catching something unexpected and provides an escape from everyday stress.</p>
+            <figure>
+                <img src="relaxing_fishing.jpg" alt="Relaxing Fishing" width="300">
+                <figcaption>Fishing allows for a peaceful retreat into nature.</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Caleb's Fishing Hobby</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+        }
+    </script>
+
 </body>
 </html>
