@@ -40,6 +40,7 @@
             background-color: white;
             border-radius: 5px;
             box-shadow: 2px 2px 10px gray;
+            display: none; /* Initially hide all sections */
         }
         footer {
             background-color: #005f73;
@@ -55,11 +56,10 @@
     <header>
         <h1>Welcome to Fishing 101</h1>
         
-        <!-- Navigation bar with icons -->
         <div class="nav-bar">
-            <a href="#about" class="nav-link"><i class="fas fa-fish"></i> About Fishing</a>
-            <a href="#types" class="nav-link"><i class="fas fa-water"></i> Types of Fishing</a>
-            <a href="#gear" class="nav-link"><i class="fas fa-tools"></i> Essential Gear</a>
+            <a href="#" class="nav-link" onclick="showSection('about')"><i class="fas fa-fish"></i> About Fishing</a>
+            <a href="#" class="nav-link" onclick="showSection('types')"><i class="fas fa-water"></i> Types of Fishing</a>
+            <a href="#" class="nav-link" onclick="showSection('gear')"><i class="fas fa-tools"></i> Essential Gear</a>
         </div>
     </header>
     
@@ -83,5 +83,23 @@
     <footer>
         <p>&copy; 2025 Fishing 101. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Function to show the clicked section and hide the others
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+        }
+
+        // By default, show the "about" section
+        showSection('about');
+    </script>
 </body>
 </html>
