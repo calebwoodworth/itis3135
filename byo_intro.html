@@ -1,1 +1,77 @@
-<h3>Time to BYO Intro page! Please fill out the form below so we can create your own page.</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYO Introduction Page</title>
+    <script defer src="scripts/survey.js"></script>
+</head>
+<body>
+
+    <h2>BYO Introduction Page</h2>
+    <h3>Time to BYO Intro page! Please fill out the form below so we can create your own page.</h3>
+
+    <form id="introForm">
+        <!-- Name -->
+        <label for="name"><strong>Name:</strong></label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Mascot -->
+        <label for="mascot"><strong>Mascot:</strong></label>
+        <input type="text" id="mascot" name="mascot" required><br><br>
+
+        <!-- Image Upload -->
+        <label for="image"><strong>Upload Image:</strong></label>
+        <input type="file" id="image" name="image" accept="image/png, image/jpeg" required><br><br>
+
+        <!-- Image Caption -->
+        <label for="caption"><strong>Image Caption:</strong></label>
+        <input type="text" id="caption" name="caption" required><br><br>
+
+        <!-- Personal Background -->
+        <label for="personalBackground"><strong>Personal Background:</strong></label>
+        <input type="text" id="personalBackground" name="personalBackground" required><br><br>
+
+        <!-- Professional Background -->
+        <label for="professionalBackground"><strong>Professional Background:</strong></label>
+        <input type="text" id="professionalBackground" name="professionalBackground" required><br><br>
+
+        <!-- Academic Background -->
+        <label for="academicBackground"><strong>Academic Background:</strong></label>
+        <input type="text" id="academicBackground" name="academicBackground" required><br><br>
+
+        <!-- Background in Web Development -->
+        <label for="webDevBackground"><strong>Background in Web Development:</strong></label>
+        <input type="text" id="webDevBackground" name="webDevBackground" required><br><br>
+
+        <!-- Primary Computer Platform -->
+        <label for="computerPlatform"><strong>Primary Computer Platform:</strong></label>
+        <input type="text" id="computerPlatform" name="computerPlatform" required><br><br>
+
+        <!-- Courses Currently Taking -->
+        <label><strong>Courses Currently Taking:</strong></label>
+        <div id="coursesContainer">
+            <button type="button" onclick="addCourse()">Add Course</button>
+        </div><br>
+
+        <!-- Funny Thing -->
+        <label for="funnyThing"><strong>Funny Thing?</strong></label>
+        <input type="text" id="funnyThing" name="funnyThing"><br><br>
+
+        <!-- Anything Else -->
+        <label for="anythingElse"><strong>Anything Else?</strong></label>
+        <input type="text" id="anythingElse" name="anythingElse"><br><br>
+
+        <!-- Agreement Checkbox -->
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label><br><br>
+
+        <!-- Control Buttons -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <div id="resultContainer"></div>
+
+</body>
+</html>
