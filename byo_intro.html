@@ -3,80 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYO Introduction Page</title>
-    <script defer src="scripts/survey.js"></script>
+    <title>Build Your Own Intro</title>
 </head>
 <body>
-
-    <h2>BYO Introduction Page</h2>
-    <h3>Time to BYO Intro page! Please fill out the form below so we can create your own page.</h3>
-
+    <h2>Fill out your introduction</h2>
+    
     <form id="introForm">
-        <!-- Name -->
-        <label for="name"><strong>Name:</strong></label>
-        <input type="text" id="name" name="name" value="Caleb Woodworth" required><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
 
-        <!-- Mascot -->
-        <label for="mascot"><strong>Mascot:</strong></label>
-        <input type="text" id="mascot" name="mascot" value="Niner (UNC Charlotte)" required><br><br>
+        <label for="mascot">Mascot:</label>
+        <input type="text" id="mascot" name="mascot" required><br><br>
 
-        <!-- Image Upload -->
-        <label for="image"><strong>Upload Image:</strong></label>
-        <input type="file" id="image" name="image" accept="image/*" required><br><br>
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image" accept="image/*"><br><br>
 
-        <!-- Image Caption -->
-        <label for="caption"><strong>Image Caption:</strong></label>
-        <input type="text" id="caption" name="caption" value="My LinkedIn Profile Picture" required><br><br>
+        <label for="caption">Image Caption:</label>
+        <input type="text" id="caption" name="caption"><br><br>
 
-        <!-- Personal Background -->
-        <label for="personalBackground"><strong>Personal Background:</strong></label>
-        <input type="text" id="personalBackground" name="personalBackground" value="I grew up in Apex, NC. I enjoy boating and fishing." required><br><br>
+        <label for="personalBackground">Personal Background:</label>
+        <textarea id="personalBackground" name="personalBackground"></textarea><br><br>
 
-        <!-- Professional Background -->
-        <label for="professionalBackground"><strong>Professional Background:</strong></label>
-        <input type="text" id="professionalBackground" name="professionalBackground" value="Worked as a busboy at Koko Cabana and a soccer referee." required><br><br>
+        <label for="professionalBackground">Professional Background:</label>
+        <textarea id="professionalBackground" name="professionalBackground"></textarea><br><br>
 
-        <!-- Academic Background -->
-        <label for="academicBackground"><strong>Academic Background:</strong></label>
-        <input type="text" id="academicBackground" name="academicBackground" value="Sophomore studying Computer Science at UNC Charlotte and minoring in economics." required><br><br>
+        <label for="academicBackground">Academic Background:</label>
+        <textarea id="academicBackground" name="academicBackground"></textarea><br><br>
 
-        <!-- Background in Web Development -->
-        <label for="webDevBackground"><strong>Background in Web Development:</strong></label>
-        <input type="text" id="webDevBackground" name="webDevBackground" value="Experience with HTML, CSS, and JavaScript." required><br><br>
+        <label for="webDevBackground">Web Development Experience:</label>
+        <textarea id="webDevBackground" name="webDevBackground"></textarea><br><br>
 
-        <!-- Primary Computer Platform -->
-        <label for="computerPlatform"><strong>Primary Computer Platform:</strong></label>
-        <input type="text" id="computerPlatform" name="computerPlatform" value="Mac" required><br><br>
+        <label for="computerPlatform">Primary Computer Platform:</label>
+        <input type="text" id="computerPlatform" name="computerPlatform"><br><br>
 
-        <!-- Courses Currently Taking -->
-        <label><strong>Courses Currently Taking:</strong></label>
+        <label>Courses I'm Taking:</label>
         <div id="coursesContainer">
-            <input type="text" name="courses" value="ITIS 3135 - Web Apps Development" required>
-            <input type="text" name="courses" value="INFO 2130 - Intro to Business Computing" required>
-            <input type="text" name="courses" value="ECON 2101 - Principles of Economics-Macro" required>
-            <input type="text" name="courses" value="CTCM 2530 - Critical Thinking & Communication (History of Photography)" required>
-            <input type="text" name="courses" value="ITSC 2175 - Logic and Algorithms" required>
-            <button type="button" onclick="addCourse()">Add Course</button>
+            <input type="text" name="courses" placeholder="Enter a course" required>
+            <button type="button" onclick="addCourse()">+ Add Course</button>
         </div><br>
 
-        <!-- Funny Thing -->
-        <label for="funnyThing"><strong>Funny Thing?</strong></label>
-        <input type="text" id="funnyThing" name="funnyThing" value="I once got stuck on a boat because the engine wouldn't start." required><br><br>
+        <label for="funnyThing">Something funny/interesting:</label>
+        <textarea id="funnyThing" name="funnyThing"></textarea><br><br>
 
-        <!-- Anything Else -->
-        <label for="anythingElse"><strong>Anything Else?</strong></label>
-        <input type="text" id="anythingElse" name="anythingElse" value="I love wearing hats." required><br><br>
+        <label for="anythingElse">Anything else?</label>
+        <textarea id="anythingElse" name="anythingElse"></textarea><br><br>
 
-        <!-- Agreement Checkbox -->
-        <input type="checkbox" id="agree" name="agree" required>
-        <label for="agree">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label><br><br>
-
-        <!-- Control Buttons -->
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
+        <button type="submit">Submit</button>
     </form>
 
-    <div id="resultContainer"></div>
-
+    <script src="survey.js"></script>
 </body>
 </html>
