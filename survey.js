@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const courses = formData.getAll('courses');
         output += "<div id='courses'><strong>Courses Currently Taking:</strong><ul>";
         courses.forEach(course => {
-            output += `<li>${course}</li>`;
+            output += `<li><strong>${course}</strong></li>`;
         });
         output += "</ul></div>";
 
