@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultContainer = document.getElementById("resultContainer");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault();  // Prevent the form from reloading the page
-        
+        event.preventDefault();  // Prevent the form from submitting and reloading the page
+
+        console.log("Form Submitted");  // Debugging: Check if submit is triggered
+
         const formData = new FormData(form);
         let output = "<h2>About Me</h2>";
 
@@ -20,12 +22,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Process each field in the form
         let imageData = '';  // Will hold image HTML if uploaded
+
         formData.forEach((value, key) => {
+            console.log(key, value);  // Debugging: See each form key and value
+
             if (key === "image") {
                 const file = form.elements["image"].files[0];
                 if (file) {
                     const reader = new FileReader();
                     reader.onload = function (e) {
+                        console.log("Image loaded");  // Debugging: Check if image is loaded
                         imageData = `
                             <div id="imageContainer">
                                 <img src="${e.target.result}" alt="Uploaded Image">
@@ -60,9 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Update the page with the result and image
         function updatePage() {
+            console.log("Updating page with output");  // Debugging: Check if page is being updated
             resultContainer.innerHTML = output + imageData;
         }
-        
+
     });
 
     // Add a new course input field dynamically
