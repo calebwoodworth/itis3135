@@ -22,11 +22,11 @@
 
         <!-- Image Upload -->
         <label for="image"><strong>Upload Image:</strong></label>
-        <input type="file" id="image" name="image" accept="image/png, image/jpeg" required><br><br>
+        <input type="file" id="image" name="image" accept="" required><br><br>
 
         <!-- Image Caption -->
         <label for="caption"><strong>Image Caption:</strong></label>
-        <input type="text" id="caption" name="caption" value="UNC Charlotte Campus" required><br><br>
+        <input type="text" id="caption" name="caption" value="My LinkedIn Profile Picture" required><br><br>
 
         <!-- Personal Background -->
         <label for="personalBackground"><strong>Personal Background:</strong></label>
@@ -38,22 +38,27 @@
 
         <!-- Academic Background -->
         <label for="academicBackground"><strong>Academic Background:</strong></label>
-        <input type="text" id="academicBackground" name="academicBackground" value="Sophomore studying Computer Science at UNC Charlotte." required><br><br>
+        <input type="text" id="academicBackground" name="academicBackground" value="Sophomore studying Computer Science at UNC Charlotte and minoring in economics." required><br><br>
 
         <!-- Background in Web Development -->
         <label for="webDevBackground"><strong>Background in Web Development:</strong></label>
-        <input type="text" id="webDevBackground" name="webDevBackground" value="Experience with HTML, CSS, JavaScript, and some React." required><br><br>
+        <input type="text" id="webDevBackground" name="webDevBackground" value="Experience with HTML, CSS, and JavaScript." required><br><br>
 
         <!-- Primary Computer Platform -->
         <label for="computerPlatform"><strong>Primary Computer Platform:</strong></label>
-        <input type="text" id="computerPlatform" name="computerPlatform" value="Windows & macOS" required><br><br>
+        <input type="text" id="computerPlatform" name="computerPlatform" value="Mac" required><br><br>
 
-        <!-- Courses Currently Taking -->
-        <label><strong>Courses Currently Taking:</strong></label>
-        <div id="coursesContainer">
-            <input type="text" name="courses" value="ITIS 3135 - Web Development" required>
-            <button type="button" onclick="addCourse()">Add Course</button>
-        </div><br>
+       <!-- Courses Currently Taking -->
+       <label><strong>Courses Currently Taking:</strong></label>
+       <div id="coursesContainer">
+       <input type="text" name="courses" value="ITIS 3135 - Web Apps Development" required>
+       <input type="text" name="courses" value="INFO 2130 - Intro to Business Computing" required>
+       <input type="text" name="courses" value="ECON 2101 - Principles of Economics-Macro" required>
+       <input type="text" name="courses" value="CTCM 2530 - Critical Thinking & Communication (History of Photography)" required>
+       <input type="text" name="courses" value="ITSC 2175 - Logic and Algorithms" required>
+       <button type="button" onclick="addCourse()">Add Course</button>
+       </div><br>
+
 
         <!-- Funny Thing -->
         <label for="funnyThing"><strong>Funny Thing?</strong></label>
