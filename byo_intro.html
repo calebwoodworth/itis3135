@@ -22,7 +22,7 @@
 
         <!-- Image Upload -->
         <label for="image"><strong>Upload Image:</strong></label>
-        <input type="file" id="image" name="image" accept="" required><br><br>
+        <input type="file" id="image" name="image" accept="image/*" required><br><br>
 
         <!-- Image Caption -->
         <label for="caption"><strong>Image Caption:</strong></label>
@@ -48,17 +48,16 @@
         <label for="computerPlatform"><strong>Primary Computer Platform:</strong></label>
         <input type="text" id="computerPlatform" name="computerPlatform" value="Mac" required><br><br>
 
-       <!-- Courses Currently Taking -->
-       <label><strong>Courses Currently Taking:</strong></label>
-       <div id="coursesContainer">
-       <input type="text" name="courses" value="ITIS 3135 - Web Apps Development" required>
-       <input type="text" name="courses" value="INFO 2130 - Intro to Business Computing" required>
-       <input type="text" name="courses" value="ECON 2101 - Principles of Economics-Macro" required>
-       <input type="text" name="courses" value="CTCM 2530 - Critical Thinking & Communication (History of Photography)" required>
-       <input type="text" name="courses" value="ITSC 2175 - Logic and Algorithms" required>
-       <button type="button" onclick="addCourse()">Add Course</button>
-       </div><br>
-
+        <!-- Courses Currently Taking -->
+        <label><strong>Courses Currently Taking:</strong></label>
+        <div id="coursesContainer">
+            <input type="text" name="courses" value="ITIS 3135 - Web Apps Development" required>
+            <input type="text" name="courses" value="INFO 2130 - Intro to Business Computing" required>
+            <input type="text" name="courses" value="ECON 2101 - Principles of Economics-Macro" required>
+            <input type="text" name="courses" value="CTCM 2530 - Critical Thinking & Communication (History of Photography)" required>
+            <input type="text" name="courses" value="ITSC 2175 - Logic and Algorithms" required>
+            <button type="button" onclick="addCourse()">Add Course</button>
+        </div><br>
 
         <!-- Funny Thing -->
         <label for="funnyThing"><strong>Funny Thing?</strong></label>
