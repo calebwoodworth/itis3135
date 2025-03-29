@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultContainer = document.getElementById("resultContainer");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault();  // Prevents form from reloading the page
+        event.preventDefault();  // Prevent the form from reloading the page
         
         const formData = new FormData(form);
         let output = "<h2>About Me</h2>";
