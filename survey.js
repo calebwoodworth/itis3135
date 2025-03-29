@@ -10,16 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const formData = new FormData(form);
         let output = "<h2>About Me</h2>";
 
-        // Start of the navbar
-        output += `
-        <nav>
-            <a href="#name">Home</a>
-            <a href="#background">Background</a>
-            <a href="#courses">Courses</a>
-            <a href="#funny">Funny</a>
-        </nav>
-        <hr>`;
-
         // Process each field in the form
         let imageData = '';  // Will hold image HTML if uploaded
 
