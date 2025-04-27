@@ -1,16 +1,49 @@
-// This script will create a simple interactive drawing using p5.js
+// Declare variable for the horizontal position of the circle
+let x = 25;
+
 function setup() {
-    createCanvas(400, 400);  // Create a 400x400 canvas
-    background(220);          // Set background color to light gray
+  // Create the canvas
+  createCanvas(720, 400);
+
+  // Set the color mode to hue-saturation-brightness (HSB)
+  colorMode(HSB);
+
+  // Set the text size
+  textSize(20);
+
+  // No animation to start
+  noLoop();
 }
 
 function draw() {
-    // Draw a red circle in the center of the canvas
-    fill(255, 0, 0);  // Set fill color to red
-    ellipse(200, 200, 100, 100);  // Draw a circle at (200, 200) with a width and height of 100
+  // Clear the background
+  background(0);
 
-    // Optional: Add more interactive shapes or effects here
-    // Example: Draw a circle that follows the mouse position
-    fill(0, 255, 0);  // Change fill color to green
-    ellipse(mouseX, mouseY, 50, 50);  // Draw a circle that follows the mouse
+  // Draw a circle, with hue determined by x position
+  fill(x / 3, 90, 90);
+  circle(x, height / 2, 50);
+
+  // Increase the x variable by 5
+  x += 5;
+
+  // Reset the circle position after it moves off the right side
+  if (x > width + 25) {
+    x = -25;
+  }
+
+  describe('circle moving to the right');
+}
+
+function mousePressed() {
+  // Start/stop the animation loop
+  if (isLooping()) {
+    noLoop();
+  } else {
+    loop();
+  }
+}
+
+function keyPressed() {
+  // Draw one frame when a key is pressed
+  redraw();
 }
